@@ -4,3 +4,8 @@ public
 
 # intellij
 .idea/
+
+# local env files
+.env
+.env.development
+.env.production

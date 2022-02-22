@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: `My Gatsby`,
@@ -11,6 +15,13 @@ module.exports = {
       options: {
         name: 'blog',
         path: `${__dirname}/blog`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'blog',
+        path: `${__dirname}/products`,
       },
     },
     'gatsby-plugin-mdx',
