@@ -13,6 +13,11 @@ const BlogPage = ({ data }) => {
           <p>Posted: {node.frontmatter.date}</p>
         </article>
       ))}
+      <article>
+        <h2>
+          <Link to="/blog/my-second-post">My second post</Link>
+        </h2>
+      </article>
     </Layout>
   );
 };

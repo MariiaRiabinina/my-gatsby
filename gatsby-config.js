@@ -20,11 +20,19 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'blog',
+        name: 'products',
         path: `${__dirname}/products`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/src/markdown-pages`,
       },
     },
     'gatsby-plugin-mdx',
     'gatsby-transformer-sharp',
+    'gatsby-transformer-remark',
   ],
 };
